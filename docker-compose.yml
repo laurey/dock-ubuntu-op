@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  op-compiler:
+    # image: ubuntu:18.04
+    build: .
+    tty: true
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Taipei
+    volumes:
+      - ./dist:/data/dist
